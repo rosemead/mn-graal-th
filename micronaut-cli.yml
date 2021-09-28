@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.example
+testFramework: spock
+sourceLanguage: java
+buildTool: maven
+features: [annotation-api, app-name, data, data-jpa, graalvm, h2, http-client, java, java-application, jdbc-hikari, logback, maven, netty-server, readme, shade, spock, views-thymeleaf, yaml]

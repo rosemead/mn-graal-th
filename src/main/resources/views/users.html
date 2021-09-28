@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head/>
+<body>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-th-each="user : ${userPage.content}">
+            <td data-th-text="|${user.name}, ${user.name}"/>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+        <div data-th-if="${userPage.totalPages > 0}"
+             data-th-each="pageNumber : ${pageNumbers}">
+            <a data-th-href="@{/users(size=${userPage.size}, page=${pageNumber})}"
+               data-th-text="${pageNumber}"
+               data-th-class="${pageNumber==userPage.pageNumber + 1} ? active"></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
